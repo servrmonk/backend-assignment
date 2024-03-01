@@ -1,19 +1,38 @@
-// core modules : http https fs path(constructing path) os
-// http : launch a server , send request
-// https: launch a ssl server
-// fs
-
 const http = require("http");
-// console.log(http);
-// http has createServer method it's a curucial method it takes request lisner as a arg just hover on it and it will return server
-
-// function rqListener(request,response){} //or u can pass anynomous fun and it will return a server just hover on it 
-// http.createServer(rqListener)
 
 const server = http.createServer((req, res) => {
-  console.log(req); //first send the request to server than this will print 
+  console.log(req.url,req.headers,req.method);
+
+  const url = req.url;
+  if(url === '/'){
+    res.write('<html>')
+    res.write('<head><title>Enter Message</title></head>');
+    res.write(`<body><form action='/message' method='POST'><input type="text" name='message'><button type='submit'>send</button></form></body>`)
+    res.write('<html>')
+    return res.end();
+  }
+  if(url==='/home'){
+    res.write(`<h1>Welcome Home</h1>`)
+    return res.end()
+  }
+  if(url==='/about'){
+    res.write(`<h1>About us </h1>`)
+    return res.end()
+  }
+  if(url==='/node'){
+    res.write(`<h1>Welcome to Nodejs </h1>`)
+    return res.end()
+  }
+  
+
+  // setHeader allow us to set a new headers's for ex content
+  // res.setHeader('Content-Type','text/html'); //type of the content is html
+  // res.write('<html>') //write allow us to write some data to the response it basically works in chunks or multiple line
+  // res.write(`<body><h1>Hello from node.js</h1></body>`)
+  // res.write('</html')
+  // res.end(); //don't write after this 
+
 });
 
-server.listen(3000,()=>{ //listen will run for upcomming request now listen takes arg first one is port that will server will listen , and the hostname in local machine the nameis localhost
-console.log("Server is running on 3000");
-});
+
+server.listen(3000);
