@@ -1,2 +1,6 @@
 how does the web work(Refresher)=>creating a node.js server => using node core modules => working with requests and responses (basics)=> Asynchronous code and the event loop
 
+Streams and Buffers
+Ex incoming requests
+our stream is simply the ongoing process multiple parts in chunks 
+a Buffers is like a bus stop , in sort buffer holds multiple chunks and work with thembefore they r released once we r done
