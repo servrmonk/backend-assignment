@@ -4,3 +4,10 @@ Streams and Buffers
 Ex incoming requests
 our stream is simply the ongoing process multiple parts in chunks 
 a Buffers is like a bus stop , in sort buffer holds multiple chunks and work with thembefore they r released once we r done
+
+Single Thread, Event Loop and Blocking Code 
+a Thread is like a process of ur os u can say, 
+
+Event loop is automatically started by node js when ur programs start u don't have to do explicitely is responsible for event call back
+event loop : handle event callback
+worker pool: is responsible for heavy liftingrun on different threads
