@@ -11,3 +11,27 @@ a Thread is like a process of ur os u can say,
 Event loop is automatically started by node js when ur programs start u don't have to do explicitely is responsible for event call back
 event loop : handle event callback
 worker pool: is responsible for heavy liftingrun on different threads
+
+
+debugging and easier development: fixing errors and developint efficiently
+
+ "start":"node app.js",
+    "server":"nodemon app.js" for running 
+    npm run then ur script name
+
+    Local Project
+    Your code
+    Core Node Package
+    Dependencies (3rd Party)(express, body-parser,and others)
+
+    installed and managed via npm
+
+
+
+    -----------------------
+    Types of Errors:
+Syntax Errors: typo type easy to fix
+Runtime Error: it will breaks when it runs
+Logical Errors: most difficult one (ur app does doesn't work like u want there is some tool to solve this)
+
+Syntax Error:
